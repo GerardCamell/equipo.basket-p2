@@ -1,0 +1,61 @@
+/* FONDO */
+:host {
+  display: block;
+  background-color: #afa3a3;
+  color: #fff; 
+  min-height: 100vh; 
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  color: darkred;
+  box-sizing: border-box;
+}
+/* Estilos globales */
+a {
+  color: darkred;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: darkred;
+}
+button {
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #a52a2a;
+}
+input, select, textarea {
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: darkred;
+  outline: none;
+}
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+form button {
+  width: auto;
+}
+

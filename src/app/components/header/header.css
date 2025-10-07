@@ -1,0 +1,31 @@
+.main-header {
+  background: #761212;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+
+}
+
+.logo {
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit; /* Hereda el color del texto normal */
+  font-weight: bold; /* Opcional: que se vea más como logo */
+  font-size: 1.5em; /* Opcional: tamaño más grande */
+  cursor: pointer; /* Opcional: que se vea que se puede clicar */
+}
