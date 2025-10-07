@@ -1,4 +1,4 @@
-.main-header {
+  .main-header {
   background: linear-gradient(135deg, #761212, #c1272d);
   color: white;
   padding: 100px 40px;
@@ -8,35 +8,48 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  }
+.main-header::after {
+  background-image: url('/assets/logo.png');
+  ) content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  width: 80px;
+  height: auto;
+  background: url('/assets/logo.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  pointer-events: none;
 }
 
-.logo {
+  .logo {
   font-size: 28px;
   font-weight: bold;
   display: flex;
   align-items: flex-end;
-}
+  }
 
-nav ul {
+  nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
   margin: 0;
   padding: 0;
   align-items: flex-end;
-}
-
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s, transform 0.3s;
   }
 
-    nav ul li a:hover {
-      color: #ffd700;
+  nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.3s;
+  }
 
-      transform: translateY(3px);
-      transition: all 0.3s ease;
-    }
+  nav ul li a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 3px #ffd700, 0 0 2px #ffd700;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  }
