@@ -21,11 +21,3 @@ a {
   transition: color 0.3s;
 
 }
-
-.logo {
-  text-decoration: none; /* Quita el subrayado */
-  color: inherit; /* Hereda el color del texto normal */
-  font-weight: bold; /* Opcional: que se vea más como logo */
-  font-size: 1.5em; /* Opcional: tamaño más grande */
-  cursor: pointer; /* Opcional: que se vea que se puede clicar */
-}
