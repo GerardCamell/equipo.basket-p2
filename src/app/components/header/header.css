@@ -2,7 +2,7 @@
   position: relative;
   background: linear-gradient(135deg, #761212, #c1272d);
   color: white;
-  padding: 100px 40px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -10,11 +10,18 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   overflow: hidden;
+  
+}
+.teamName{
+  font-size: 65px;
+  color: black;
 
+}
 .logo {
   font-size: 28px;
   font-weight: bold;
   z-index: 2; 
+  
 }
 
 nav ul {
