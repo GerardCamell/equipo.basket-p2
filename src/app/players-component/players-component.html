@@ -1,1 +1,26 @@
-<p>players-component works!</p>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Player List</h2>
+    <table class="table table-striped table-bordered w-75 mx-auto text-center">
+    <thead class="table-dark">
+      <tr>
+        <th>Nº</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>Posición</th>
+        <th>Altura</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Player of teams;let i= index; track Player">
+           <td>{{Player.alias}}</td>
+           <td>{{Player.name}}</td>
+           <td>{{Player.lastName}}</td>
+           <td>{{Player.age}} years</td>
+           <td>{{Player.position}}</td>
+           <td>{{Player.weight}}</td>
+      </tr> 
+    </tbody>
+  </table>
+</div>
+  

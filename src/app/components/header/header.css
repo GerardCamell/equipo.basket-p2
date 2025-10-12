@@ -58,3 +58,6 @@ nav ul {
   pointer-events: none;
   z-index: 1;
 }
+.teamLogo{
+  height: 85px;
+}

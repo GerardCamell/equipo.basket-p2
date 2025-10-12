@@ -1,1 +1,10 @@
-<p>detail-component works!</p>
+<!-- detail.component.html -->
+<div *ngIf="player">
+  <h2>Detalle del jugador</h2>
+  <p><strong>Nombre:</strong> {{player.name}} {{player.lastName}}</p>
+  <p><strong>Posición:</strong> {{player.position}}</p>
+  <p><strong>Edad:</strong> {{player.age}}</p>
+  <p><strong>Altura:</strong> {{player.height}}</p>
+  <p><strong>Peso:</strong> {{player.weight}} lbs</p>
+
+</div>

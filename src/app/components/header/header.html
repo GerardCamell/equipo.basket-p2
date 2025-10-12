@@ -1,14 +1,24 @@
 <header class="main-header">
   <nav class="container-fluid ">
     <span class="logo ">EQUIPO BASKET by FrontCat</span>
-    <div class="container text-center">
-      <h1 class="teamName">NBA (provisional name)</h1>
+    <div class="container text-center ">
+      @if(currentRoute=='/jugadores'){
+        <div class="container d-flex align-items-center justify-content-center gap-3">
+          <img src="CHI.png" alt="Logo" class="teamLogo">
+          <h1 class="teamName mb-0">{{ Player.teams.toUpperCase() }}</h1>
+        </div>
+        
+      }@else {
+        <h1 class="teamName">NBA (provisional name)</h1>
+      }
+      
     </div>
     
     <div>
     <ul>
       <li><a routerLink="/home">Inicio</a></li>
       <li><a routerLink="/jugadores">Jugadores</a></li>
+      
     </ul>
     </div>
     
