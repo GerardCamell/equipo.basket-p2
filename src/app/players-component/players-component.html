@@ -6,21 +6,18 @@
         <th>Nº</th>
         <th>Nombre</th>
         <th>Apellido</th>
-        <th>Edad</th>
-        <th>Posición</th>
-        <th>Altura</th>
+        
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let Player of teams;let i= index; track Player">
-           <td>{{Player.alias}}</td>
-           <td>{{Player.name}}</td>
-           <td>{{Player.lastName}}</td>
-           <td>{{Player.age}} years</td>
-           <td>{{Player.position}}</td>
-           <td>{{Player.weight}}</td>
-      </tr> 
-    </tbody>
+  @for (Player of teams; track Player) {
+    <tr>
+      <td>{{ Player.alias }}</td>
+      <td>{{ Player.name }}</td>
+      <td>{{ Player.lastName }}</td>
+    </tr>
+  }
+</tbody>
   </table>
 </div>
   
