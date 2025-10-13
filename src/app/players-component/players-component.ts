@@ -19,7 +19,8 @@ export class PlayersComponent {
     height:'6-7',
     weight:195,
     alias: 7,
-    teams: "Chigago Bulls"
+    teams: "Chicago Bulls",
+    headshot: "./HEADSHOTS/Terry_Dalen.png"
   },
   {
     name:'Julian',
@@ -29,8 +30,8 @@ export class PlayersComponent {
     height:'6-8',
     weight:198,
     alias:15,
-    teams: "Chigago Bulls"
-
+    teams: "Chicago Bulls",
+    headshot: "./HEADSHOTS/Phillips_Julian.png"
   },
   {
     name:'Noa',
@@ -40,7 +41,8 @@ export class PlayersComponent {
     height:'6-9',
     weight:194,
     alias:24,
-    teams: "Chigago Bulls"
+    teams: "Chicago Bulls",
+    headshot: "./HEADSHOTS/Essengue_Noa.png"
   },
   {
     name:'Jalen',
@@ -50,7 +52,8 @@ export class PlayersComponent {
     height:'6-9',
     weight:215,
     alias:25,
-    teams: "Chigago Bulls"
+    teams: "Chicago Bulls",
+    headshot: "./HEADSHOTS/Smith_Jalen.png"
   },
   {
     name:'Tre',
@@ -60,7 +63,8 @@ export class PlayersComponent {
     height:'6-1',
     weight:185,
     alias:30,
-    teams: "Chigago Bulls"
+    teams: "Chigago Bulls",
+    headshot: "./HEADSHOTS/Jones_Tre.png"
   },
 ];
 

@@ -9,6 +9,7 @@ export interface Player{
   weight:number;
   alias:number;
   teams:string;
+  headshot: string;
 }
 
 @Component({
