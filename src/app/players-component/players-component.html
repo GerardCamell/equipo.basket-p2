@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Player List</h2>
+    <table class="table table-striped table-bordered w-75 mx-auto text-center">
+    <thead class="table-dark">
+      <tr>
+        <th>Nº</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+  @for (Player of teams; track Player) {
+    <tr>
+      <!--TEST de imagenes
+      <td><img [src]="Player.headshot" width="150"></td>-->
+      <td>{{ Player.alias }}</td>
+      <td>{{ Player.name }}</td>
+      <td>{{ Player.lastName }}</td>
+    </tr>
+  }
+</tbody>
+  </table>
+</div>
+  

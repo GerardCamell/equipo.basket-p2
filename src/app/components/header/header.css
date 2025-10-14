@@ -1,0 +1,63 @@
+.main-header {
+  position: relative;
+  background: linear-gradient(135deg, #761212, #c1272d);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  
+}
+.teamName{
+  font-size: 65px;
+  color: black;
+
+}
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 2; 
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+    nav ul li a:hover {
+      color: #ffd700;
+      text-shadow: 0 0 3px #ffd700, 0 0 6px #ffd700;
+      transform: translateY(-2px);
+    }
+
+.header-logo {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  opacity: 1; 
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+.teamLogo{
+  height: 85px;
+}
