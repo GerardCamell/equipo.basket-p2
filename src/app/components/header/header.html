@@ -2,25 +2,65 @@
   <nav class="container-fluid ">
     <span class="logo ">EQUIPO BASKET by FrontCat</span>
     <div class="container text-center ">
-      @if(currentRoute=='/jugadores'){
+      @if(currentRoute=='/players'){
         <div class="container d-flex align-items-center justify-content-center gap-3">
           <img src="CHI.png" alt="Logo" class="teamLogo">
           <h1 class="teamName mb-0">{{ Player.teams.toUpperCase() }}</h1>
         </div>
         
       }@else {
-        <h1 class="teamName">NBA (provisional name)</h1>
+        <h1 class="teamName">NBA</h1>
       }
       
     </div>
     
-    <div>
+    <!--<div>
     <ul>
       <li><a routerLink="/home">Inicio</a></li>
       <li><a routerLink="/jugadores">Jugadores</a></li>
       
     </ul>
-    </div>
+    </div>-->
+
+    <div class="teamsLogos content-flex md-2 container-fluid">
+       
+          <a routerLink="/home">
+            <img src="teamBadges/nbaHome.svg" alt="Logo" class="teamLogoInit mt-3 "></a>
+            <img src="teamBadges/ATL.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/BKN.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/BOS.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/CHA.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <a routerLink="/players">
+              <img src="CHI.png" alt="Logo" class="teamLogoLeague mt-4">
+            </a>
+            <img src="teamBadges/CLE.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/DAL.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/DEN.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/DET.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/GSW.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/HOU.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/IND.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/LAC.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/LAL.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/MEM.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/MIA.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/MIL.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/MIN.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/NOP.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/NYK.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/OKC.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/ORL.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/PHU.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/PHX.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/POR.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/SAC.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/SAS.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/TOR.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/UTA.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="teamBadges/WAS.svg" alt="Logo" class="teamLogoLeague mt-4">
+            <img src="logo1.png" alt="Logo" class="header-logo">
+      </div>
+
     
   </nav>
   <img src="logo1.png" alt="Logo" class="header-logo">

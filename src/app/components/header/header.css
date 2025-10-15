@@ -30,7 +30,7 @@ nav ul {
   gap: 25px;
   margin: 0;
   padding: 0;
-  z-index: 2;
+  z-index: 0;
 }
 
   nav ul li a {
@@ -51,13 +51,25 @@ nav ul {
   position: absolute;
   right: 40px;
   bottom: 0;
-  height: 100%;
-  width: auto;
+  max-height:99%;
+  height: auto;
   opacity: 1; 
   object-fit: contain;
   pointer-events: none;
-  z-index: 1;
+  
 }
 .teamLogo{
   height: 85px;
+}
+.teamLogoLeague{
+  height:45px;
+  flex-shrink: 0;
+
+
+}
+.teamLogoInit{
+  height:60px;
+}
+.LogoLeague{
+  height:125px;
 }
