@@ -1,4 +1,4 @@
-/* FONDO */
+FONDO 
 :host {
   display: block;
   background-color: #afa3a3;
@@ -16,14 +16,14 @@
     height: 100%;
     background: url('/logo1.png') center center / contain no-repeat; 
     opacity: 0.15; 
-    z-index: 0;
+    z-index: -1;
   }
 
 * {
   color: darkred;
   box-sizing: border-box;
 }
-/* Estilos globales */
+ Estilos globales 
 a {
   color: darkred;
   text-decoration: none;
