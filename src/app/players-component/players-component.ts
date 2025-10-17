@@ -1,11 +1,11 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import {CommonModule} from '@angular/common';
-import { Player } from '../detail-component/detail-component';
+import { Player, DetailComponent } from '../detail-component/detail-component';
 
 @Component({
   selector: 'app-players-component',
   standalone:true,
-  imports: [CommonModule],
+  imports: [CommonModule, DetailComponent],
   templateUrl: './players-component.html',
   styleUrl: './players-component.css'
 })
@@ -20,7 +20,8 @@ export class PlayersComponent {
     weight:195,
     alias: 7,
     teams: "Chicago Bulls",
-    headshot: "./HEADSHOTS/Terry_Dalen.png"
+    headshot: "/HEADSHOTS/Terry_Dalen.png",
+    initials:"CHI"
   },
   {
     name:'Julian',
@@ -31,7 +32,8 @@ export class PlayersComponent {
     weight:198,
     alias:15,
     teams: "Chicago Bulls",
-    headshot: "./HEADSHOTS/Phillips_Julian.png"
+    headshot: "/HEADSHOTS/Phillips_Julian.png",
+    initials:"CHI"
   },
   {
     name:'Noa',
@@ -42,7 +44,8 @@ export class PlayersComponent {
     weight:194,
     alias:24,
     teams: "Chicago Bulls",
-    headshot: "./HEADSHOTS/Essengue_Noa.png"
+    headshot: "/HEADSHOTS/Essengue_Noa.png",
+    initials:"CHI"
   },
   {
     name:'Jalen',
@@ -53,7 +56,8 @@ export class PlayersComponent {
     weight:215,
     alias:25,
     teams: "Chicago Bulls",
-    headshot: "./HEADSHOTS/Smith_Jalen.png"
+    headshot: "/HEADSHOTS/Smith_Jalen.png",
+    initials:"CHI"
   },
   {
     name:'Tre',
@@ -64,9 +68,10 @@ export class PlayersComponent {
     weight:185,
     alias:30,
     teams: "Chigago Bulls",
-    headshot: "./HEADSHOTS/Jones_Tre.png"
+    headshot: "/HEADSHOTS/Jones_Tre.png",
+    initials:"CHI"
   },
 ];
-
+selectedPlayer: any;
 
 }

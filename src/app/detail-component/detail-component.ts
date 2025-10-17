@@ -10,6 +10,7 @@ export interface Player{
   alias:number;
   teams:string;
   headshot: string;
+  initials:string;
 }
 
 @Component({
@@ -21,5 +22,6 @@ export interface Player{
 })
 export class DetailComponent {
  @Input() player: Player | null = null;
+ 
 
 }

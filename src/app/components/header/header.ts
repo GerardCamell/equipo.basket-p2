@@ -18,6 +18,7 @@ currentRoute: string = '';
 Player={
   teams:'Chigago Bulls'
 };
+playerSelected: any;
 constructor(private router: Router) {
   this.router.events.pipe(
     filter(event => event instanceof NavigationEnd)
