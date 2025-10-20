@@ -1,15 +1,21 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { Player, DetailComponent } from '../detail-component/detail-component';
+import { PlayerFilterPipe } from '../pipes/player-filter-pipe';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-players-component',
   standalone:true,
-  imports: [CommonModule, DetailComponent],
+  imports: [CommonModule, DetailComponent, FormsModule, PlayerFilterPipe],
   templateUrl: './players-component.html',
   styleUrl: './players-component.css'
 })
 export class PlayersComponent {
+
+  searchText: string = '';    
+  filterBy: string = 'name';
   
   teams: Player[] = [{
     name:'Dalen',
