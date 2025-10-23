@@ -1,12 +1,25 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
+import { HeaderComponent } from './components/header/header';
+
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [HeaderComponent, RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly title = signal('equipo-basket');
+export class AppComponent { 
+ currentRoute = '';
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(() => {
+      this.currentRoute = this.router.url;
+    });
+  }
 }
+
+
