@@ -12,7 +12,7 @@ import { HeaderComponent } from './components/header/header';
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
-export class AppComponent { 
+export class AppComponent {
  currentRoute = '';
 
   constructor(private router: Router) {

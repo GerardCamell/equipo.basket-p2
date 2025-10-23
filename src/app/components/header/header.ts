@@ -25,6 +25,6 @@ constructor(private router: Router) {
   ).subscribe((event: NavigationEnd) => {
     this.currentRoute = event.urlAfterRedirects;
   });
-}  
+}
 
-} 
+}

@@ -10,7 +10,7 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   overflow: hidden;
-  
+
 }
 .teamName{
   font-size: 65px;
@@ -20,8 +20,8 @@
 .logo {
   font-size: 28px;
   font-weight: bold;
-  z-index: 2; 
-  
+  z-index: 2;
+
 }
 
 nav ul {
@@ -53,10 +53,10 @@ nav ul {
   bottom: 0;
   max-height:99%;
   height: auto;
-  opacity: 1; 
+  opacity: 1;
   object-fit: contain;
   pointer-events: none;
-  
+
 }
 .teamLogo{
   height: 85px;
