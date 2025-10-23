@@ -10,3 +10,9 @@ video {
 button {
   margin: 5px;
 }
+.media-player video {
+  width: 100%;
+  max-width: 900px; /* puedes ajustar este valor */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
