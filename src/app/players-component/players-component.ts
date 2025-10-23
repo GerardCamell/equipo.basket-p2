@@ -27,7 +27,8 @@ export class PlayersComponent {
     alias: 7,
     teams: "Chicago Bulls",
     headshot: "/HEADSHOTS/Terry_Dalen.png",
-    initials:"CHI"
+    initials:"CHI",
+    video: "/videos/dalenTerry.mp4"
   },
   {
     name:'Julian',
@@ -39,7 +40,8 @@ export class PlayersComponent {
     alias:15,
     teams: "Chicago Bulls",
     headshot: "/HEADSHOTS/Phillips_Julian.png",
-    initials:"CHI"
+    initials:"CHI",
+    video:"/videos/julianPhillips.mp4"
   },
   {
     name:'Noa',
@@ -51,7 +53,8 @@ export class PlayersComponent {
     alias:24,
     teams: "Chicago Bulls",
     headshot: "/HEADSHOTS/Essengue_Noa.png",
-    initials:"CHI"
+    initials:"CHI",
+    video:"/videos/noaEssengue.mp4"
   },
   {
     name:'Jalen',
@@ -63,7 +66,8 @@ export class PlayersComponent {
     alias:25,
     teams: "Chicago Bulls",
     headshot: "/HEADSHOTS/Smith_Jalen.png",
-    initials:"CHI"
+    initials:"CHI",
+    video:"/videos/jalenSmith.mp4"
   },
   {
     name:'Tre',
@@ -75,7 +79,8 @@ export class PlayersComponent {
     alias:30,
     teams: "Chigago Bulls",
     headshot: "/HEADSHOTS/Jones_Tre.png",
-    initials:"CHI"
+    initials:"CHI",
+    video:"/videos/treJones.mp4"
   },
 ];
 selectedPlayer: any;

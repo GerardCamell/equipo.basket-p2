@@ -36,6 +36,10 @@
               <div class="col-6 col-sm-4"><strong>Equipo:</strong></div>
               <div class="col-6 col-sm-8">{{ player.initials }}</div>
             </div>
+            
+    </div>
+    <div class="mt-4 text-center">
+      <app-media-component [videoUrl]="player.video"></app-media-component>
     </div>
   </div>
 } @else {
