@@ -1,0 +1,43 @@
+@if (player) {
+  
+ <div class="row align-items-center bg-dark rounded mt-4 shadow p-4">
+      <!-- Imagen "HEADSHOT" del player seleccionado -->
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+       <img [src]="player.headshot" class="img-fluid rounded large-headshot" alt="{{ player.name }}">
+      </div>
+
+      <!-- Detalles que se muestran del jugador -->
+    <div class="col-md-8">
+        <h2 class="fw-bold text-uppercase border-bottom pb-2 mb-3">
+          {{ player.name }} {{ player.lastName }}
+        </h2>
+
+            <div class="row mb-2">
+              <div class="col-6 col-sm-4"><strong>Dorsal:</strong></div>
+              <div class="col-6 col-sm-8">#{{ player.alias }}</div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-6 col-sm-4"><strong>Edad:</strong></div>
+              <div class="col-6 col-sm-8">{{ player.age }}</div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-6 col-sm-4"><strong>Altura:</strong></div>
+              <div class="col-6 col-sm-8">{{ player.height }}</div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-6 col-sm-4"><strong>Peso:</strong></div>
+              <div class="col-6 col-sm-8">{{ player.weight }}</div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-6 col-sm-4"><strong>Posición:</strong></div>
+              <div class="col-6 col-sm-8">{{ player.position }}</div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-6 col-sm-4"><strong>Equipo:</strong></div>
+              <div class="col-6 col-sm-8">{{ player.initials }}</div>
+            </div>
+    </div>
+  </div>
+} @else {
+  <p class="text-muted"></p>
+}
