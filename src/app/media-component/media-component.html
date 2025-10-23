@@ -1,1 +1,16 @@
-<p>media-component works!</p>
+<div class="media-player" *ngIf="videoUrl">
+  <video #videoPlayer width="480" controls>
+    <source [src]="videoUrl" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
+
+  <div class="controls mt-2">
+    <button class="btn btn-success" (click)="play()">Play</button>
+    <button class="btn btn-warning" (click)="pause()">Pause</button>
+    <button class="btn btn-danger" (click)="stop()">Stop</button>
+  </div>
+</div>
+
+<p *ngIf="!videoUrl" class="text-muted">
+  Selecciona un jugador para ver su vídeo.
+</p>
