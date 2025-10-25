@@ -11,11 +11,7 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   overflow: hidden;
-<<<<<<< HEAD
   z-index: 1;
-=======
-
->>>>>>> Carmen
 }
 
 .teamName {
@@ -27,13 +23,8 @@
 .logo {
   font-size: 28px;
   font-weight: bold;
-<<<<<<< HEAD
   margin-left: 40px;
-  z-index: 2; 
-=======
   z-index: 2;
-
->>>>>>> Carmen
 }
 
 nav ul {
@@ -56,12 +47,12 @@ nav ul {
     transition: transform 0.5s, color 0.3s ease, text-shadow 0.3s ease;
   }
 
-  nav ul li a:hover {
-    color: #ffd700;
-    text-decoration: none;
-    text-shadow: 0 0 1px #ffd700, 0 0 6px #ffd700;
-    transform: scale(1.3) translateY(-2px);
-  }
+    nav ul li a:hover {
+      color: #ffd700;
+      text-decoration: none;
+      text-shadow: 0 0 1px #ffd700, 0 0 6px #ffd700;
+      transform: scale(1.3) translateY(-2px);
+    }
 
 
 .header-logo {
@@ -73,11 +64,7 @@ nav ul {
   opacity: 1;
   object-fit: contain;
   pointer-events: none;
-<<<<<<< HEAD
   z-index: -1;
-=======
-
->>>>>>> Carmen
 }
 
 .teamLogo {
@@ -85,7 +72,6 @@ nav ul {
   z-index: 2;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
   filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.6));
-
 }
 
 .teamLogoLeague {
@@ -99,25 +85,16 @@ nav ul {
   flex-shrink: 0;
   filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.6));
 }
-<<<<<<< HEAD
 
   .teamLogoLeague3:hover {
     transform: scale(1.3);
     transition: transform 0.5s;
-   }
-
-  .teamLogoInit {
-    height: 60px;
   }
 
-  .LogoLeague{
-    height:125px;
-  }
-=======
-.teamLogoInit{
-  height:60px;
+.teamLogoInit {
+  height: 60px;
 }
-.LogoLeague{
-  height:125px;
+
+.LogoLeague {
+  height: 125px;
 }
->>>>>>> Carmen
