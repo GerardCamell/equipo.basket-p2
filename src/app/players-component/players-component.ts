@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import { Player, DetailComponent } from '../detail-component/detail-component';
 import { PlayerFilterPipe } from '../pipes/player-filter-pipe';
 import { FormsModule } from '@angular/forms';
-
+//a
 
 @Component({
   selector: 'app-players-component',
