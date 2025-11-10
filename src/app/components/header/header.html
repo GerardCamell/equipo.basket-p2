@@ -7,8 +7,9 @@
         <img src="CHI.png" alt="Logo" class="teamLogo">
         <h1 class="teamName mb-0">{{ Player.teams.toUpperCase() }}</h1>
       </div>
-
-      }@else {
+     }@else if (currentRoute=='/create-player') {
+      <h1 class="teamName"> Crear Jugador</h1>
+     }@else {
       <h1 class="teamName"> Inicio</h1>
       }
 

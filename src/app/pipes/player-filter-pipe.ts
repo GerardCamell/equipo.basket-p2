@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Player } from '../detail-component/detail-component';
+import { Player } from '../detail-component/player.model';
 
 @Pipe({
   name: 'playerFilter',

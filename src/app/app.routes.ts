@@ -1,9 +1,20 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home';
-import { PlayersComponent } from './players-component/players-component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'players', component: PlayersComponent }
+
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./components/home/home').then(m => m.HomeComponent)
+  },
+  {
+    path: 'players',
+    loadComponent: () =>
+      import('./players-component/players-component').then(m => m.PlayersComponent)
+  },
+  {
+    path: 'create-player',
+    loadComponent: () =>
+      import('./form-player/form-player').then(m => m.FormPlayer)
+  }
 ];
