@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { Player, DetailComponent } from '../detail-component/detail-component';
+import { DetailComponent } from '../detail-component/detail-component';
+import { Player } from '../detail-component/player.model';
 import { PlayerFilterPipe } from '../pipes/player-filter-pipe';
 
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
