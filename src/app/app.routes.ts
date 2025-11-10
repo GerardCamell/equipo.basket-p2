@@ -12,5 +12,10 @@ export const routes: Routes = [
     path: 'players',
     loadComponent: () =>
       import('./players-component/players-component').then(m => m.PlayersComponent)
+  },
+  {
+    path: 'create-player',
+    loadComponent: () =>
+      import('./form-player/form-player').then(m => m.FormPlayer)
   }
 ];

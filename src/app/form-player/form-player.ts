@@ -10,6 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './form-player.css',
 })
 export class FormPlayer {
+uploadFile($event: Event) {
+throw new Error('Method not implemented.');
+}
   newPlayer: Player = new Player();
 
   @Output() onAdd = new EventEmitter<Player>();
@@ -19,7 +22,7 @@ export class FormPlayer {
     this.newPlayer = new Player();
   };
   
-  
+
 
 
 } 
