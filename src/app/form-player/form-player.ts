@@ -73,12 +73,4 @@ export class FormPlayer implements  OnInit {
       alert('Error al guardar jugador: ' + err.message);
     }
   }
-
-  uploadFile(event: Event) {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
-      this.selectedFile = input.files[0];
-      this.newPlayer.headshot = `/HEADSHOTS/${this.selectedFile.name}`;
-    }
-  }
 }
