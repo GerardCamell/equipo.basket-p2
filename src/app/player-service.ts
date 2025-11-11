@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Firestore, addDoc, collection, collectionData, deleteDoc, doc, updateDoc } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection, collectionData, deleteDoc, doc, query, updateDoc, where } from '@angular/fire/firestore';
 import { Player } from './detail-component/player.model';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -38,4 +38,5 @@ export class PlayerService {
     const playerDoc =  doc(this.firestore, `players/${playerId}`);
     return deleteDoc(playerDoc);
   }
+
 }

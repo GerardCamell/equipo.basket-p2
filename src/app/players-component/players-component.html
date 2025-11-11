@@ -1,4 +1,7 @@
 <div class="container mt-5">
+  <!--Boton que va a la página de crear nuevo -->
+  <button class="btn btn-primary" (click)="goToCreatePlayer()">Crear Jugador</button>
+
 <!--El buscador (pipe)-->
 <div class="container title align-items-center"></div>
    <div class="container d-flex justify-content-end align-items-center mb-3">
@@ -28,13 +31,13 @@
       </thead>
 
       <tbody>
-        <tr
-          *ngFor="let player of players | playerFilter:searchText:filterBy"
-          (click)="selectedPlayer = player"
-          style="cursor: pointer;"
-        >
-          <td>{{ player.name }}</td>
-          <td>{{ player.lastName }}</td>
+        <tr *ngFor="let player of players | playerFilter:searchText:filterBy" (click)=" selectedPlayer = player"style="cursor: pointer;">
+            <td>{{ player.name }}</td>
+            <td>{{ player.lastName }}</td>
+            <td>
+               <button class="btn btn-warning btn-sm" (click)="goToEditPlayer(player, $event)">Editar</button>
+              <button class="btn btn-danger btn-sm" (click)="deletePlayer(player, $event)"> Eliminar</button>
+            </td>
         </tr>
 
         <tr *ngIf="(players | playerFilter:searchText:filterBy).length === 0">

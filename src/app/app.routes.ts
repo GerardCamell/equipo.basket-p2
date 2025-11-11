@@ -16,5 +16,10 @@ export const routes: Routes = [
     path: 'create-player',
     loadComponent: () =>
       import('./form-player/form-player').then(m => m.FormPlayer)
-  }
+  },
+  {
+  path: 'edit-player/:id',
+  loadComponent: () =>
+    import('./form-player/form-player').then(m => m.FormPlayer)
+}
 ];
