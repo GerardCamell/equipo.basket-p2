@@ -50,9 +50,9 @@
         </th>
       </tr>
       <tr>
-        <th>Foto Jugador</th>
+        <th>Inicial</th>
         <th>
-          <input type="file" (change)="uploadFile($event)" required>
+           <input [(ngModel)]="newPlayer.initials" name="initials" placeholder="CHI" required>
         </th>
       </tr>
     </thead>
