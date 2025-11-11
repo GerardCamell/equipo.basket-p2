@@ -47,13 +47,13 @@ export class FormPlayer implements  OnInit {
 
       await addDoc(playersRef, playerToSave);
 
-      alert(`✅ Jugador "${this.newPlayer.name}" agregado correctamente`);//mensaje de creacion con exito
+      alert(`Jugador "${this.newPlayer.name}" agregado correctamente`);//mensaje de creacion con exito
 
       this.router.navigate(['/players']);// para volver a players
 
     } catch (err: any) {
-      console.error('❌ Error al agregar jugador:', err);
-      alert('❌ Error al crear jugador: ' + err.message);
+      console.error(' Error al agregar jugador:', err);
+      alert(' Error al crear jugador: ' + err.message);
     }
     this.router.navigate(['/players']);
   }
@@ -66,11 +66,11 @@ export class FormPlayer implements  OnInit {
         delete (playerToSave as any).id; // Firebase no guarda el id como campo
         await updateDoc(playerRef, playerToSave);
 
-        alert(`✅ Jugador "${this.newPlayer.name}" actualizado correctamente`);
+        alert(`Jugador "${this.newPlayer.name}" actualizado correctamente`);
         this.router.navigate(['/players']);
     } catch (err: any) {
-      console.error('❌ Error al guardar jugador:', err);
-      alert('❌ Error al guardar jugador: ' + err.message);
+      console.error('Error al guardar jugador:', err);
+      alert('Error al guardar jugador: ' + err.message);
     }
   }
 
@@ -78,7 +78,7 @@ export class FormPlayer implements  OnInit {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {
       this.selectedFile = input.files[0];
-      console.log('📸 Archivo seleccionado:', this.selectedFile.name);
+      this.newPlayer.headshot = `/HEADSHOTS/${this.selectedFile.name}`;
     }
   }
 }
