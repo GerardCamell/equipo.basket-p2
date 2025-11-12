@@ -14,13 +14,13 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
   styleUrls: ['./form-player.css'],
 })
 export class FormPlayer implements OnInit {
-  newPlayer: Player = new Player();
-  isEditMode = false;
 
+  newPlayer: Player = new Player();
   selectedPhoto: File | null = null;
   selectedVideo: File | null = null;
   previewPhoto: string | null = null;
   previewVideo: string | null = null;
+  isEditMode = false;
 
   constructor(private firestore: Firestore, private router: Router, private route: ActivatedRoute) { }
 
@@ -60,22 +60,22 @@ export class FormPlayer implements OnInit {
     }
   }
 
-  async uploadFile(file: File, path: string) {
+  private async uploadFile(file: File, path: string) {
     const storage = getStorage();
     const storageRef = ref(storage, path);
     await uploadBytes(storageRef, file);
     return await getDownloadURL(storageRef);
   }
 
-  async savePlayer() {
+  async createPlayer() {
     try {
+      // Subir archivos si se seleccionaron
       if (this.selectedPhoto) {
         this.newPlayer.headshot = await this.uploadFile(
           this.selectedPhoto,
           `players/photos/${Date.now()}_${this.selectedPhoto.name}`
         );
       }
-
       if (this.selectedVideo) {
         this.newPlayer.video = await this.uploadFile(
           this.selectedVideo,
@@ -83,22 +83,45 @@ export class FormPlayer implements OnInit {
         );
       }
 
+      const playersRef = collection(this.firestore, 'players');
       const playerToSave = { ...this.newPlayer };
       delete (playerToSave as any).id;
 
-      if (this.isEditMode && this.newPlayer.id) {
-        const playerRef = doc(this.firestore, `players/${this.newPlayer.id}`);
-        await updateDoc(playerRef, playerToSave);
-        alert('Jugador actualizado correctamente');
-      } else {
-        const playersRef = collection(this.firestore, 'players');
-        await addDoc(playersRef, playerToSave);
-        alert('Jugador creado correctamente');
-      }
-
+      await addDoc(playersRef, playerToSave);
+      alert(`Jugador "${this.newPlayer.name}" agregado correctamente`);
       this.router.navigate(['/players']);
     } catch (err: any) {
-      alert('Error: ' + err.message);
+      console.error('Error al crear jugador:', err);
+      alert('Error al crear jugador: ' + err.message);
+    }
+  }
+
+  async updatePlayer() {
+    try {
+      // Subir archivos si se seleccionaron
+      if (this.selectedPhoto) {
+        this.newPlayer.headshot = await this.uploadFile(
+          this.selectedPhoto,
+          `players/photos/${Date.now()}_${this.selectedPhoto.name}`
+        );
+      }
+      if (this.selectedVideo) {
+        this.newPlayer.video = await this.uploadFile(
+          this.selectedVideo,
+          `players/videos/${Date.now()}_${this.selectedVideo.name}`
+        );
+      }
+
+      const playerRef = doc(this.firestore, `players/${this.newPlayer.id}`);
+      const playerToSave = { ...this.newPlayer };
+      delete (playerToSave as any).id;
+
+      await updateDoc(playerRef, playerToSave);
+      alert(`Jugador "${this.newPlayer.name}" actualizado correctamente`);
+      this.router.navigate(['/players']);
+    } catch (err: any) {
+      console.error('Error al actualizar jugador:', err);
+      alert('Error al actualizar jugador: ' + err.message);
     }
   }
 }
