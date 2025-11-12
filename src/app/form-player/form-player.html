@@ -55,6 +55,18 @@
            <input [(ngModel)]="newPlayer.initials" name="initials" placeholder="CHI" required>
         </th>
       </tr>
+      <tr>
+  <th>Foto</th>
+  <th>
+    <input type="file" (change)="onFileSelected($event, 'photo')" accept="image/*">
+  </th>
+</tr>
+<tr>
+  <th>Video</th>
+  <th>
+    <input type="file" (change)="onFileSelected($event, 'video')" accept="video/*">
+  </th>
+</tr>
     </thead>
   </table>
 <!--Si esta en modo edicion actualiza el jugador, si no lo crea-->
