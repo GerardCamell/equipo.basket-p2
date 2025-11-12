@@ -1,19 +1,23 @@
 <div class="container mt-5">
+
+  <!--El buscador (pipe)-->
+  <div class="container title align-items-center"></div>
   <!--Boton que va a la página de crear nuevo -->
-  <button class="btn btn-primary" (click)="goToCreatePlayer()">Crear Jugador</button>
 
-<!--El buscador (pipe)-->
-<div class="container title align-items-center"></div>
-   <div class="container d-flex justify-content-end align-items-center mb-3">
-      <input type="text" placeholder="Buscar jugador..."[(ngModel)]="searchText" style="margin-bottom: 10px; padding: 5px; width: 200px;"/>
-      <select [(ngModel)]="filterBy" style="margin-left: 10px; padding: 5px;">
-        <option value="nombre">Nombre</option>
-        <option value="posicion">Posición</option>
-        <option value="edad">Edad</option>
-     </select>
+  <div class="container d-flex justify-content-end align-items-center mb-3">
+    <button class="btn btn-primary" style="margin-right: 10px;" (click)="goToCreatePlayer()">Crear Jugador</button>
 
-    </div>
-<!--El titulo de la página-->
+    <input type="text" placeholder="Buscar jugador..." [(ngModel)]="searchText" style="margin-top: 10px; margin-bottom: 10px; padding: 5px; width: 200px;" />
+
+    <select [(ngModel)]="filterBy" style="margin-left: 10px; padding: 5px;">
+
+      <option value="nombre">Nombre</option>
+      <option value="posicion">Posición</option>
+      <option value="edad">Edad</option>
+    </select>
+
+  </div>
+  <!--El titulo de la página-->
   <h2 class="text-center mb-4">Lista de jugadores</h2>
 
   <!-- Carga datos desde Firestore -->
@@ -27,17 +31,18 @@
         <tr>
           <th>Nombre</th>
           <th>Apellido</th>
+          <th>Ajustes</th>
         </tr>
       </thead>
 
       <tbody>
-        <tr *ngFor="let player of players | playerFilter:searchText:filterBy" (click)=" selectedPlayer = player"style="cursor: pointer;">
-            <td>{{ player.name }}</td>
-            <td>{{ player.lastName }}</td>
-            <td>
-               <button class="btn btn-warning btn-sm" (click)="goToEditPlayer(player, $event)">Editar</button>
-              <button class="btn btn-danger btn-sm" (click)="deletePlayer(player, $event)"> Eliminar</button>
-            </td>
+        <tr *ngFor="let player of players | playerFilter:searchText:filterBy" (click)=" selectedPlayer = player" style="cursor: pointer;">
+          <td>{{ player.name }}</td>
+          <td>{{ player.lastName }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" style="margin-right: 10px;" (click)="goToEditPlayer(player, $event)">Editar</button>
+            <button class="btn btn-danger btn-sm" (click)="deletePlayer(player, $event)"> Eliminar</button>
+          </td>
         </tr>
 
         <tr *ngIf="(players | playerFilter:searchText:filterBy).length === 0">
