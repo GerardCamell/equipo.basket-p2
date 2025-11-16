@@ -69,7 +69,6 @@ export class FormPlayer implements OnInit {
 
   async createPlayer() {
     try {
-      // Subir archivos si se seleccionaron
       if (this.selectedPhoto) {
         this.newPlayer.headshot = await this.uploadFile(
           this.selectedPhoto,
@@ -98,7 +97,6 @@ export class FormPlayer implements OnInit {
 
   async updatePlayer() {
     try {
-      // Subir archivos si se seleccionaron
       if (this.selectedPhoto) {
         this.newPlayer.headshot = await this.uploadFile(
           this.selectedPhoto,
