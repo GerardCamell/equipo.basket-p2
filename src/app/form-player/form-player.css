@@ -4,3 +4,15 @@
     color: rgb(2, 2, 2);
     font-weight: bold;
  }
+
+ #btnAtras{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+ #btnAtras:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+ }

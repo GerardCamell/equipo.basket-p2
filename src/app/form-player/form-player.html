@@ -1,3 +1,9 @@
+<!--Ruta para volver atrás en caso de NO querer hacer un jugador nuevo o no querer "Updatear"-->
+<a routerLink="/players">
+        <img src="flecha-izquierda.svg" alt="Logo" class="btnAtras ms-3" id="btnAtras"/>
+      </a>
+<!--FIN de la ruta, empieza el formulario-->
+
 <form (ngSubmit)="isEditMode ? updatePlayer() : createPlayer()"> <!--Si esta en modo edicion actualiza el jugador, si no lo crea-->
   <table class="table table-striped table-bordered w-50 mx-auto text-center mt-5">
     <thead class="table-dark">
@@ -50,9 +56,23 @@
         </th>
       </tr>
       <tr>
-        <th>Inicial</th>
+        <th>Inicial Equipo</th>
         <th>
            <input [(ngModel)]="newPlayer.initials" name="initials" placeholder="CHI" required>
+        </th>
+      </tr>
+       <tr>
+        <th>Foto</th>
+        <th>
+           <input type="file" (change)="onFileSelected($event)" />
+           <img *ngIf="newPlayer.headshot" [src]="newPlayer.headshot" width="150">
+        </th>
+      </tr>
+       <tr>
+        <th>Video</th>
+        <th>
+           <input type="file" (change)="onSelectedVideo($event)" />
+           <video *ngIf="newPlayer.video" [src]="newPlayer.video" width="200" controls></video>
         </th>
       </tr>
     </thead>
