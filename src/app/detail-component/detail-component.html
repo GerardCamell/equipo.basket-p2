@@ -3,7 +3,7 @@
  <div class="row align-items-center bg-dark rounded mt-4 shadow p-4">
       <!-- Imagen "HEADSHOT" del player seleccionado -->
       <div class="col-md-4 text-center mb-3 mb-md-0">
-       <img [src]="player.headshot" class="img-fluid rounded large-headshot" alt="{{ player.name }}">
+       <img [src]="player.headshot" class="img-fluid rounded large-headshot" alt="{{ player.headshot }}">
       </div>
 
       <!-- Detalles que se muestran del jugador -->
@@ -39,7 +39,7 @@
             
     </div>
     <div class="mt-4 text-center">
-      <app-media-component [videoUrl]="player.video"></app-media-component>
+      <app-media-component *ngIf="player.video" [videoUrl]="player.video"/>
     </div>
   </div>
 } @else {

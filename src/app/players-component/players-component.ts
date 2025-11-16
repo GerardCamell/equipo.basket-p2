@@ -5,7 +5,7 @@ import { DetailComponent } from '../detail-component/detail-component';
 import { Player } from '../detail-component/player.model';
 import { PlayerFilterPipe } from '../pipes/player-filter-pipe';
 import { Router } from '@angular/router';
-import { Firestore, addDoc, collection, collectionData, deleteDoc, doc } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData, deleteDoc, doc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 
