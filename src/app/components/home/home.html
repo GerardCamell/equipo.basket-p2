@@ -21,7 +21,7 @@
   </ng-template>
 
   <!-- Featured -->
-  <div class="featured-card mb-3" *ngIf="matches?.length">
+  <div class="featured-card mb-3" *ngIf="matches.length">
     <div class="featured-main d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center gap-3">
         <img [src]="matches[0].logoHome" alt="{{matches[0].homeTeam}}" class="badge featured-badge" (error)="onLogoError($event, matches[0], 'home')">
@@ -42,7 +42,7 @@
   </div>
 
   <!-- Mini carousel -->
-  <div class="mini-carousel mb-3" *ngIf="highlights?.length">
+  <div class="mini-carousel mb-3" *ngIf="highlights.length">
     <div class="slide" *ngFor="let s of highlights; let i = index" [class.active]="i === activeHighlight" (click)="openVideo(s.match)">
       <img [src]="s.thumb" alt="{{s.title}}" class="carousel-thumb" loading="lazy">
       <div class="slide-caption">{{ s.title }}</div>

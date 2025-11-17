@@ -1,20 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MediaComponent } from '../media-component/media-component';
+import { Player } from './player.model';
 
-export interface Player {
-  name: string;
-  lastName: string;
-  position: string;
-  age: number;
-  height: string;
-  weight: number;
-  alias: number;
-  teams: string;
-  headshot: string;
-  initials: string;
-  video: string;
-}
 
 @Component({
   selector: 'app-detail-component',
