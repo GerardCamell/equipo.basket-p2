@@ -23,7 +23,7 @@
   "private": true,
   "dependencies": {
     "-": "^0.0.1",
-    “node”:”20.19.0”,
+    "node": "20.19.0",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
     "@angular/core": "^20.3.0",
