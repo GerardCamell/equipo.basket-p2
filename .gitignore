@@ -42,3 +42,8 @@ __screenshots__/
 .DS_Store
 Thumbs.db
 backend/equipo-basket-p2-firebase-adminsdk-*.json
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
